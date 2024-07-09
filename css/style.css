@@ -10,32 +10,91 @@ body {
     font-family: sans-serif;
 }
 
+h3 {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+img {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
 
 #main-header {
     min-height: 50px;
     background-color: #FF6900;
+    box-shadow: 0 0 10px #777;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1;
 }
 
 main {
-    min-height: 1000px;
     margin-bottom: 50px;
     padding-top: 100px;
 }
 
 .row {
-    min-height: 1000px;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 15px;
 }
 
 .column {
-    background-color: #777;
     flex-basis: calc(100% / 3 - 30px / 3);
+}
+
+.card {
+    position: relative;
+}
+
+.favourite {
+    background-color: #FFF;
+    font-size: 25px;
+    padding: 5px 10px;
+    position: absolute;
+    right: 0;
+    top: 25px;
+}
+
+.labels {
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+}
+
+.labels > span {
+    color: #FFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.labels > span.discount {
+    background-color: #F00;
+}
+
+.labels > span.sustainability {
+    background-color: #080;
+}
+
+.product > span {
+    font-size: 12px;
+}
+
+.new-price {
+    color: #F00;
+    font-weight: bold;
+}
+
+.price {
+    font-weight: bold;
+    text-decoration: line-through;
 }
 
 #main-footer {
