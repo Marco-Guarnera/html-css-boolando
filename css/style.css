@@ -1,0 +1,21 @@
+/* CSS Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Generics */
+body {
+    font-family: sans-serif;
+}
+
+/* Utilities */
+.container {
+    margin: 0 auto;
+    max-width: 1080px;
+}
+
+.flex {
+    display: flex;
+}
