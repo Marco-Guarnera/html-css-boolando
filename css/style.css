@@ -6,6 +6,13 @@
 }
 
 /* Generics */
+a {
+    color: #FFF;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 body {
     font-family: sans-serif;
 }
@@ -18,10 +25,17 @@ h3 {
 
 img {
     display: block;
-    height: 100%;
-    width: 100%;
+    max-width: 100%;
 }
 
+ul {
+    list-style-type: none;
+}
+
+#logo {
+    width: 25%;
+    margin: 0 auto;
+}
 
 #main-header {
     min-height: 50px;
@@ -32,6 +46,25 @@ img {
     left: 0;
     right: 0;
     z-index: 1;
+}
+
+.navbar {
+    min-height: 50px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar > div {
+    flex-basis: calc(100% / 3);
+}
+
+.navbar ul {
+    flex-direction: row;
+    gap: 15px;
+}
+
+.navbar-right > ul {
+    justify-content: flex-end;
 }
 
 main {
@@ -50,6 +83,7 @@ main {
 }
 
 .card {
+    cursor: pointer;
     position: relative;
 }
 
@@ -60,6 +94,10 @@ main {
     position: absolute;
     right: 0;
     top: 25px;
+}
+
+.favourite:hover {
+    color: #F00;
 }
 
 .labels {
@@ -101,7 +139,6 @@ main {
     min-height: 75px;
     background-color: #1A1A1A;
 }
-
 
 /* Utilities */
 .container {
