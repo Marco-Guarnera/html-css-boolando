@@ -82,12 +82,24 @@ main {
     flex-basis: calc(100% / 3 - 30px / 3);
 }
 
-.card {
-    cursor: pointer;
+.card-image {
     position: relative;
 }
 
+.card-image > img:last-of-type {
+    display: none;
+}
+
+.card-image:hover > img:last-of-type {
+    display: block;
+}
+
+.card-image:hover > img:first-child {
+    display: none;
+}
+
 .favourite {
+    cursor: pointer;
     background-color: #FFF;
     font-size: 25px;
     padding: 5px 10px;
@@ -100,24 +112,24 @@ main {
     color: #F00;
 }
 
-.labels {
+.card-badges {
     position: absolute;
     left: 0;
-    bottom: 100px;
+    bottom: 50px;
 }
 
-.labels > span {
+.card-badges > span {
     color: #FFF;
     font-size: 12px;
     font-weight: bold;
     padding: 5px 10px;
 }
 
-.labels > span.discount {
+.badge-discount {
     background-color: #F00;
 }
 
-.labels > span.sustainability {
+.badge-tag {
     background-color: #080;
 }
 
@@ -125,14 +137,8 @@ main {
     font-size: 12px;
 }
 
-.new-price {
+.product-price {
     color: #F00;
-    font-weight: bold;
-}
-
-.price {
-    font-weight: bold;
-    text-decoration: line-through;
 }
 
 #main-footer {
